@@ -1,0 +1,11 @@
+<div *ngFor="let part of dataSource">
+  <a [href]="'/parts/' + part.id">{{part.name}}</a>
+  {{part.number}}
+  {{part.id}}
+</div>
+
+<p> make a part </p>
+
+<input [(ngModel)]="newPart.name">
+<input [(ngModel)]="newPart.number">
+<button (click)="postPart(newPart)">new part</button>
